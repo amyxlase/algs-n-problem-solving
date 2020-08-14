@@ -77,7 +77,7 @@ public class apple {
 		return dist[end];
 	}
 	
-}
+}/*
 
 class pair implements Comparable<pair> {
 
@@ -97,5 +97,5 @@ class pair implements Comparable<pair> {
 	public String toString() {
 		return index + " " + distance;
 	}
-
-}
+ 
+}*/

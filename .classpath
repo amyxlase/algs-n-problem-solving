@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="data structures"/>
+	<classpathentry kind="src" path="dynamic programming"/>
+	<classpathentry kind="src" path="geometric algorithms"/>
+	<classpathentry kind="src" path="graph"/>
+	<classpathentry kind="src" path="greedy"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
