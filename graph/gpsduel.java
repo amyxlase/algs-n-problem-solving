@@ -107,6 +107,8 @@ public class gpsduel {
 
 }
 
+//test
+
 class edge implements Comparable<edge> {
 
 	int to, weight;
