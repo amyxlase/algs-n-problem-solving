@@ -126,27 +126,3 @@ public class wall {
 	}
 
 }
-
-class coord {
-
-	int x, y, step;
-	boolean visited;
-
-	public coord(int a, int b) {
-		x = a;
-		y = b;
-		step = 0;
-		visited = false;
-	}
-
-	public String toString() {
-		return "(" + x + ", " + y + ")";
-	}
-
-	public boolean equals(Object o) {
-
-		coord other = (coord) o;
-		return ((x == other.x) && (y == other.y));
-
-	}
-}
