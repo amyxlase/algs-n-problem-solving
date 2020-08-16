@@ -15,31 +15,31 @@ public class bobsled {
 			course[i] = new loc(sc.nextInt(), sc.nextInt());
 		}
 
+		Arrays.sort(course);
+
 		int max = 0;
-		
-		for (int i = 0; i < N; i++) {
+
+		for (int i = N; i > 0; i--) {
+
+			loc c1 = course[i];
+			loc c2 = course[i - 1];
 			
+
+			c2.speed = Math.min(c2.speed, c1.speed + (c1.x - c2.x));
+
+		}
+
+	//	System.out.println(Arrays.toString(course));
+
+		for (int i = 0; i < N; i++) {
+
 			loc c1 = course[i];
 			loc c2 = course[i + 1];
 
 			c2.speed = Math.min(c2.speed, c1.speed + (c2.x - c1.x));
 		}
-		
-		System.out.println(Arrays.toString(course));
-		
-		//pelase?
-		
-	/*	for (int i = N; i > 0; i--) {
 
-			loc c1 = course[i];
-			loc c2 = course[i - 1];
-
-			c2.speed = Math.min(c2.speed, c1.speed - (c1.x - c2.x));
-
-		}
-		
-		System.out.println(Arrays.toString(course)); */
-
+	//	System.out.println(Arrays.toString(course));
 
 		for (int i = 0; i < N; i++) {
 
@@ -47,22 +47,23 @@ public class bobsled {
 			loc c2 = course[i + 1];
 
 			if (c2.speed > c1.speed) {
-				c1 = course[i+1];
+				c1 = course[i + 1];
 				c2 = course[i];
 			}
 
-			int maxInRange = c1.speed + (c2.x - c1.x - (c2.speed - c1.speed)) / 2;
+			// System.out.println(c1 + " " + c2);
+
+			int maxInRange = c1.speed + (Math.abs(c2.x - c1.x) - Math.abs(c2.speed - c1.speed)) / 2;
 			max = Math.max(maxInRange, max);
 
-			System.out.println(maxInRange);
+			// System.out.println(maxInRange);
 
 		}
 
 		int last = course[N].speed + (L - course[N].x);
+		// System.out.println(last);
 
 		System.out.println(Math.max(max, last));
-
-		System.out.println(last);
 
 	}
 
@@ -81,7 +82,7 @@ class loc implements Comparable<loc> {
 	public int compareTo(loc o) {
 		return x - o.x;
 	}
-	
+
 	public String toString() {
 		return x + ": " + speed;
 	}
