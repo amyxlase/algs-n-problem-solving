@@ -27,6 +27,8 @@ public class bobsled {
 		
 		System.out.println(Arrays.toString(course));
 		
+		//test
+		
 	/*	for (int i = N; i > 0; i--) {
 
 			loc c1 = course[i];
