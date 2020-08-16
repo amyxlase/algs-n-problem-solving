@@ -27,7 +27,7 @@ public class bobsled {
 		
 		System.out.println(Arrays.toString(course));
 		
-		//test
+		//pelase?
 		
 	/*	for (int i = N; i > 0; i--) {
 
