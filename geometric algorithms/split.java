@@ -108,34 +108,3 @@ public class split {
 
 }
 
-class integer implements Comparable<integer>{
-
-	int n, i;
-
-	public integer(int a, int b) {
-		n = a;
-		i = b;
-	}
-
-	public boolean equals(Object o) {
-
-		integer other = (integer) o;
-
-		return (n == other.n) && (i == other.i);
-
-	}
-
-	@Override
-	public int compareTo(integer o) {
-		
-		if (n == o.n) {
-			return i - o.i;
-		}
-		
-		return n - o.n;
-	}
-	
-	public String toString() {
-		return n + ": " + i;
-	}
-}
